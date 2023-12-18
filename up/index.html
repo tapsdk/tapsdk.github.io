@@ -1,28 +1,172 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-  
-  <head>
-    <base href="https://upvalueteam.github.io/"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>UpClean</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-  </head>
-  
-  <body style="background: #3498db;display: flex;min-height: 952px;align-items: center;">
-    <div style="height:100%;width:100%;margin: auto 0">
-      <p style="font-size: 54px;">UpClean</p>
-      <p>
-      </p>
-      <p>
-      </p>
-      <a href="https://play.google.com/store/apps/details?id=com.master.up.tool.clean">
-        <img src="imgs/android_app_on_play_logo_large.png"></a>
-      <p>
-      </p>
-      <p style="font-size: 12px;">
-        <a class="white" href="mailto:xmwang8901@gmail.com" target="_blank">Contact the developer</a></p>
-    </div>
-    <p>
-    </p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Details</title>
+    <style>
+        body {
+            text-align: left; /* 设置整体内容左对齐 */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #ffffff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        div img {
+            max-width: 100%;
+            height: auto;
+			margin:2px;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #4285f4;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+		
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #3498db;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="appName">Loading...</h1>
+    </header>
+
+    <section>
+        <img style='width:84px;height:84px' id="appIcon" src="#" alt="App Icon">
+
+        <h2>Description</h2>
+        <p id="appDescription">Loading...</p>
+
+        <h2>Screenshots</h2>
+        <div id="appScreenshots">
+            <!-- Screenshots will be dynamically added here -->
+        </div>
+
+        <h2>支持和联系</h2>
+        <p id="contactInfo">Loading...</p>
+
+        <a href="" id="downloadButton" class="download-button">Download Now</a>
+    </section>
+
+    <footer>
+        &copy; <span id='yearInfo'></span> <span id='teamInfo'></span>
+    </footer>
+
+    <script>
+        // JSON 数据直接在 <script> 标签内部定义
+        const config = {
+            "appName": "UpClean",
+            "appDescription": `UpClean is a junk file cleaning tool you can trust
+
+This tool has the following functions:
+
+1. It can help you delete junk files, empty folders, cache junk, etc. on your phone
+
+2. It helps you find apps with sensitive permissions
+
+3. It helps you find similar photos so you can delete similar photos
+
+4. It can help you find files that take up a lot of space
+
+5. It can help you manage installed apps, and you can uninstall those apps that are not commonly used
+
+There are more other functions waiting for your exploration, welcome to use, I wish you a pleasant experience`,
+            "appIcon": "https://play-lh.googleusercontent.com/Eq7r0pWEj7zz-HYVqbNcDxYAicepOOigR001QEhflw9Tx05_Rx8leVSzo0GCsE51iw=w240-h480",
+            "screenshots": [
+                "https://play-lh.googleusercontent.com/n7vOOm5QyCn-J3SHjIN1FPZHggMVq--ebnnnG-sk1WNZaXFBCFtXSOddyTEfEcY_AgY=w526-h296-rw",
+                "https://play-lh.googleusercontent.com/QEbmFcac2k1hxDTUSeGiF8Avi3U4nIA968FL3F0r3iW6uWiFrjYQ8jgqKd3ExVXvPg=w526-h296-rw",
+				"https://play-lh.googleusercontent.com/mJGMKu3Y-YvToL7j1sgi7ce-nTM2prfPJCO1kZKvxHNm7iAD247rtdlg3Q_aevDv0g=w526-h296-rw",
+				"https://play-lh.googleusercontent.com/pPXe7kc2G5t0PYjG10fC-4_atmXSkwaSQmeKCVu7yDxwwFX0rAu_iEXuhNMgkfBPu_U=w526-h296-rw"
+            ],
+            "contactInfo": "Contact us at xmwang8901@gmail.com",
+            "teamInfo": "Up Value Team",
+            "downloadUrl": "https://play.google.com/store/apps/details?id=com.master.up.tool.clean"
+        };
+
+        // JavaScript to dynamically update content
+        document.title = config.appName;
+        document.getElementById('appName').innerHTML = config.appName;
+        document.getElementById('appDescription').innerText = config.appDescription;
+        document.getElementById('appIcon').src = config.appIcon;
+
+        const screenshotsContainer = document.getElementById('appScreenshots');
+        config.screenshots.forEach(screenshot => {
+            const img = document.createElement('img');
+            img.src = screenshot;
+            img.alt = 'Screenshot';
+            screenshotsContainer.appendChild(img);
+        });
+
+        document.getElementById('contactInfo').innerHTML = config.contactInfo;
+		
+        document.getElementById('downloadButton').href = config.downloadUrl;
+		
+		document.getElementById('yearInfo').innerHTML = new Date().getFullYear();
+
+        document.getElementById('teamInfo').innerText = config.teamInfo;
+    </script>
+</body>
 
 </html>
